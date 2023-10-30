@@ -1,42 +1,48 @@
-Повторить = 'q'
-while Повторить == 'q':
-      import math
-      num1 = int(input("Введите число "))
-      oper = input ("введите операцию ")
-      num2 = int(input("Введите второе число "))
-      sin = math.sin
-      cos = math.cos
-      tan = math.tan
-      sqrt = (num1 ** 0.5)
-      factorial = math.factorial 
-      if oper == '+':
-          print (num1 + num2)
-      elif oper == '-':
-          print (num1 - num2)
-      elif oper == '*':
-          print (num1 * num2)
-      elif oper == '/':
-            if num1 == 0:
-             print (num1 / num2) 
+try:
+    Повторить = 'q'
+    while Повторить == 'q':
+        import math
+        num1 = int(input("Введите число "))
+        oper = input ("введите операцию ")
+        num2 = int(input("Введите второе число "))
+        sin = math.sin
+        cos = math.cos
+        tan = math.tan
+        sqrt = (num1 ** 0.5)
+        factorial = math.factorial 
+        if oper == '+':
+            print (num1 + num2)
+        elif oper == '-':
+            print (num1 - num2)
+        elif oper == '*':
+            print (num1 * num2)
+        elif oper == '/':
+                if num1 == 0:
+                    print (num1 / num2) 
+                else:
+                    print ("Ошибка")
+        elif oper == '**':
+            print (num1 ** num2)
+        elif oper == 'sin':
+            print (math.sin (num1))
+        elif oper == 'cos':
+            print (math.cos (num1))
+        elif oper == 'tan':
+            print (math.tan (num1))
+        elif oper == 'sqrt':
+            if (num2 > 0):
+                print(num1 ** 0.5)
             else:
-              print ("Ошибка")
-      elif oper == '**':
-          print (num1 ** num2)
-      elif oper == 'sin':
-          print (math.sin (num1))
-      elif oper == 'cos':
-          print (math.cos (num1))
-      elif oper == 'tan':
-          print (math.tan (num1))
-      elif oper == 'sqrt':
-          print (num1 ** 0.5)
-      elif oper == "factorial":
-        print (math.factorial (num1))
-      elif oper == '%':
-          print (num1 % num2)
-      else:
-          print ("Ошибка")
-      Повторить = input("Введите 'q' чтобы начать заново ")
-
-
-
+                print ('Ошибка')
+        elif oper == "factorial":
+            if (num2 > 0):
+                print(math.factorial(num1))
+            else:
+                print ('Ошибка')
+        elif oper == '%':
+            print (num1 % num2)
+        else:
+            print ("Ошибка")
+    Повторить = input("Введите 'q' чтобы начать заново ")
+except(ValueError, SyntaxError, ZeroDivisionError):
+    print("Ошибка")
